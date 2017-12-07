@@ -1,0 +1,31 @@
+<div id="createTrip" class="container">
+    <div class="row mb-4 justify-content-between">
+        <h1 class="display-3 d-inline-block">{{title}}</h1>
+        <div id="saveForm" class="my-auto">
+            <div class="input-group input-group-lg align-middle">
+                <input type="text" id="tripName" class="form-control" placeholder="Trip name" aria-label="Trip name">
+                <span class="input-group-btn">
+                    <button id="saveButton" class="btn btn-primary" type="button">Save</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col p-0 bg-light">
+            <div class="input-group mb-2">
+                <input type="text" id="searchText" class="form-control" placeholder="Search" aria-label="Search">
+                <span class="input-group-btn">
+                    <button id="searchButton" class="btn btn-secondary" type="button">Search</button>
+                </span>
+            </div>
+            <h1 class="h3 text-primary ml-3">Places:</h1>
+            <ul id="placesList" class="list-group mb-2 px-1"></ul>
+        </div>
+        <div class="col-8 pr-0">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/create.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{googleApiKey}}&callback=initMap"></script>

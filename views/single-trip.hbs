@@ -1,0 +1,26 @@
+<div id="singleTrip" class="container">
+    <div class="row justify-content-between">
+        <h1 class="display-2 text-center mb-4">{{title}}</h1>
+        <div class="text-right my-auto">
+            <button type="button" id="deleteButton" class="btn btn-outline-danger">Delete <i class="fa fa-remove" aria-hidden="true"></i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col bg-light pt-3 px-0">
+            <h1 class="text-primary text-center">Places:</h1>
+            <ul class="list-group places">
+                {{#each places}}
+                <li class="list-group-item h5 place" onclick="map.panTo({ lat: {{lat}}, lng:{{lon}} });">
+                    <span class="h3 icon">{{icon}}</span> <span class="font-weight-normal">{{name}}</span>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-8 pr-0">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/trips.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key={{googleApiKey}}&callback=loadTrip"></script>

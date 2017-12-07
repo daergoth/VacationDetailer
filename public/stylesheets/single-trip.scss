@@ -1,0 +1,16 @@
+#singleTrip {
+    #map {
+        width: 100%;
+        height: 500px;
+    }
+
+    ul.places {
+        max-height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    
+        li.place {
+            cursor:pointer;
+        }
+    }
+}

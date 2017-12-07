@@ -1,0 +1,20 @@
+#createTrip {
+
+    #saveForm {
+        height: fit-content;
+    }
+
+    #map {
+        height: 500px;
+    }
+
+    #placesList {
+        max-height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .list-group-item {
+            cursor: pointer;
+        }
+    }
+}

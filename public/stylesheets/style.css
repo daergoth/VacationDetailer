@@ -1,0 +1,25 @@
+#singleTrip #map {
+  width: 100%;
+  height: 500px; }
+
+#singleTrip ul.places {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  #singleTrip ul.places li.place {
+    cursor: pointer; }
+
+#createTrip #saveForm {
+  height: fit-content; }
+
+#createTrip #map {
+  height: 500px; }
+
+#createTrip #placesList {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  #createTrip #placesList .list-group-item {
+    cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */
