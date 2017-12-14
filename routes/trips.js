@@ -25,8 +25,9 @@ router.get("/:tripId", function (req, res, next) {
         {
             title: trip.name,
             places: trip.places.map((p, i) => {
-                p.icon = alphabet[i];
-                return p;
+                let tmpPlace = Object.assign(Object.create(null), p);
+                tmpPlace.icon = alphabet[i];
+                return tmpPlace;
             }),
             googleApiKey: process.env.GOOGLE_MAPS_API_KEY
         }
